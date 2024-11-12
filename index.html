@@ -89,9 +89,7 @@
 
       loadingBar.style.display = "block";
       var valueString = window.Telegram.WebApp.initDataUnsafe.user.username;
-	  if (valueString == null){
-	    valueString = "fool";
-	  }
+	  
 	  console.log(valueString);
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -102,7 +100,7 @@
 		  unityInstance.SendMessage(
             "jsHook",
             "changeText",
-			valueString
+			"fool"
 		  );
           loadingBar.style.display = "none";
         }).catch((message) => {
