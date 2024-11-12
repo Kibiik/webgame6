@@ -98,7 +98,8 @@
         }).then((unityInstance) => {
 		  unityInstance.SendMessage(
             "jsHook",
-            "changeText"
+            "changeText",
+			valueString
 		  );
           loadingBar.style.display = "none";
         }).catch((message) => {
