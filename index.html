@@ -88,9 +88,9 @@
       }
 
       loadingBar.style.display = "block";
-      var valueString = window.Telegram.WebApp.initDataUnsafe.user.username;
+    //  var valueString = window.Telegram.WebApp.initDataUnsafe.user.username;
 
-	  console.log(valueString);
+	//  console.log(valueString);
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
@@ -100,7 +100,7 @@
 		  unityInstance.SendMessage(
             "jsHook",
             "changeText",
-			valueString
+			window.Telegram.WebApp.initDataUnsafe.user.username
 		  );
           loadingBar.style.display = "none";
         }).catch((message) => {
